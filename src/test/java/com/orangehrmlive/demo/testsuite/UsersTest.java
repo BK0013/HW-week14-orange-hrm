@@ -14,8 +14,8 @@ public class UsersTest extends TestBase {
     AdminPage adminPage;
 
 
-    @BeforeMethod
-    public void inIt() {
+    @BeforeMethod(groups = {"sanity","smoke", "regression"})
+    public void inIt1() {
         loginpage = new LoginPage();
         addUserPage = new AddUserPage();
         dashBoard = new DashboardPage ();

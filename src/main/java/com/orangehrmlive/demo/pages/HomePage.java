@@ -8,7 +8,7 @@ public class HomePage extends Utility {
     @FindBy(css = "img[alt='OrangeHRM']")
     WebElement logo;
 
-    @FindBy(xpath = "//b[contains(text(),'Admin')]")
+    @FindBy(xpath = "//b[normalize-space()='Admin']")
     WebElement admin;
 
     @FindBy(xpath = "//b[contains(text(),'PIM')]")
@@ -28,6 +28,7 @@ public class HomePage extends Utility {
     }
 
     public void clickOnAdmin() {
+
         clickOnElement(admin);
     }
 

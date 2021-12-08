@@ -41,17 +41,17 @@ public class LoginPage extends Utility {
 
     public void enterUserNameField(String Username) {
         sendTextToElement(userNameField, Username);
-        CustomListeners.test.log(Status.PASS, "Enter Username" + Username);
+       // CustomListeners.test.log(Status.PASS, "Enter Username" + Username);
     }
 
     public void enterPasswordField(String Password) {
         sendTextToElement(passwordField, Password);
-        CustomListeners.test.log(Status.PASS, "Enter Password" + Password);
+        //CustomListeners.test.log(Status.PASS, "Enter Password" + Password);
     }
 
     public void clickOnLoginBtn() {
         clickOnElement(loginBtn);
-        CustomListeners.test.log(Status.PASS, "click on login button");
+        //CustomListeners.test.log(Status.PASS, "click on login button");
     }
 
     public String verifyLoginPanel() {

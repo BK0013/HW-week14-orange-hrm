@@ -8,11 +8,11 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-@Listeners(CustomListeners.class)
+//@Listeners(CustomListeners.class)
 public class LoginTest extends TestBase {
     LoginPage loginpage;
 
-    @BeforeMethod
+    @BeforeMethod(groups = {"sanity","smoke", "regression"})
     public void inIt() {
         loginpage = new LoginPage();
 
@@ -30,9 +30,9 @@ public class LoginTest extends TestBase {
         loginpage.enterPasswordField("admin123");
         loginpage.clickOnLoginBtn();
 
-        String expectedMsg = "Welcome Sophie";//wellcome msg with sopie or Paul
+        String expectedMsg = "Welcome Babar";//wellcome msg with name
         String actualMsg = loginpage.verifyWellComeMsg();
-        Assert.assertEquals(actualMsg, expectedMsg, "verification fail : Welcome Sophie");
+        Assert.assertEquals(actualMsg, expectedMsg, "verification fail : Welcome Babar");
 
 
     }
